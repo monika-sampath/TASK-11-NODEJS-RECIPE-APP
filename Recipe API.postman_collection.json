@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "b3ebee8b-3ba6-4405-b6d6-3a0ec00e23e0",
+		"name": "Recipe API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40095885"
+	},
+	"item": [
+		{
+			"name": "createRecipe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"name\": \"Vegetable Stir Fry\",\r\n  \"ingredients\": [\"Broccoli\", \"Carrots\", \"Bell Peppers\", \"Soy Sauce\", \"Ginger\", \"Garlic\", \"Sesame Oil\"],\r\n  \"instructions\": \"Heat sesame oil in a pan, add garlic and ginger. Add vegetables and stir-fry for 5 minutes. Add soy sauce and cook for another 2 minutes.\",\r\n  \"prepTime\": \"15 minutes\",\r\n  \"servings\": 2\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"name\": \"Vegetable Stir Fry\",\r\n  \"ingredients\": [\"Broccoli\", \"Carrots\", \"Bell Peppers\", \"Soy Sauce\", \"Ginger\", \"Garlic\", \"Sesame Oil\"],\r\n  \"instructions\": \"Heat sesame oil in a pan, add garlic and ginger. Add vegetables and stir-fry for 5 minutes. Add soy sauce and cook for another 2 minutes.\",\r\n  \"prepTime\": \"15 minutes\",\r\n  \"servings\": 2\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/recipes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"recipes"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "409"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"199-qrfxNJYzUtR3JPL9YxQlZKOunWM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Nov 2024 06:21:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Recipe created successfully!\",\n    \"recipe\": {\n        \"name\": \"Vegetable Stir Fry\",\n        \"ingredients\": [\n            \"Broccoli\",\n            \"Carrots\",\n            \"Bell Peppers\",\n            \"Soy Sauce\",\n            \"Ginger\",\n            \"Garlic\",\n            \"Sesame Oil\"\n        ],\n        \"instructions\": \"Heat sesame oil in a pan, add garlic and ginger. Add vegetables and stir-fry for 5 minutes. Add soy sauce and cook for another 2 minutes.\",\n        \"prepTime\": \"15 minutes\",\n        \"servings\": 2,\n        \"_id\": \"674aaed197e621bd71dc91e9\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getAllRecipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/recipes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"recipes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "792"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"318-K0DBdvDbKKsjHxEbXoQdhZE0GOI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Nov 2024 06:40:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"674aaea497e621bd71dc91e7\",\n        \"name\": \"Chocolate Chip Cookies\",\n        \"ingredients\": [\n            \"Flour\",\n            \"Butter\",\n            \"Sugar\",\n            \"Brown Sugar\",\n            \"Eggs\",\n            \"Vanilla Extract\",\n            \"Baking Soda\",\n            \"Salt\",\n            \"Chocolate Chips\"\n        ],\n        \"instructions\": \"Preheat oven to 350°F. Mix butter, sugar, and eggs. Add flour, baking soda, and salt. Fold in chocolate chips. Drop spoonfuls of dough onto a baking sheet and bake for 10-12 minutes.\",\n        \"prepTime\": \"25 minutes\",\n        \"servings\": 12,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"674aaed197e621bd71dc91e9\",\n        \"name\": \"Vegetable Stir Fry\",\n        \"ingredients\": [\n            \"Broccoli\",\n            \"Carrots\",\n            \"Bell Peppers\",\n            \"Soy Sauce\",\n            \"Ginger\",\n            \"Garlic\",\n            \"Sesame Oil\"\n        ],\n        \"instructions\": \"Heat sesame oil in a pan, add garlic and ginger. Add vegetables and stir-fry for 5 minutes. Add soy sauce and cook for another 2 minutes.\",\n        \"prepTime\": \"15 minutes\",\n        \"servings\": 2,\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getRecipeById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/recipes/674a9d6e97e621bd71dc91e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes",
+						"674a9d6e97e621bd71dc91e1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/recipes/674a9d6e97e621bd71dc91e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"recipes",
+								"674a9d6e97e621bd71dc91e1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "244"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f4-Hc2auoGYX+KWwqwXznAA+Ruwzns\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Nov 2024 05:12:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"674a9d6e97e621bd71dc91e1\",\n    \"name\": \"Pasta Carbonara\",\n    \"ingredients\": [\n        \"Pasta\",\n        \"Eggs\",\n        \"Cheese\",\n        \"Pancetta\",\n        \"Pepper\"\n    ],\n    \"instructions\": \"Cook pasta, mix with eggs and cheese, add pancetta and pepper.\",\n    \"prepTime\": \"30 minutes\",\n    \"servings\": 4,\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "updateRecipe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Pasta Carbonara\",\r\n  \"ingredients\": [\"Pasta\", \"Eggs\", \"Cheese\", \"Bacon\", \"Pepper\"],\r\n  \"instructions\": \"Cook pasta, mix with eggs and cheese, add bacon and pepper.\",\r\n  \"prepTime\": \"25 minutes\",\r\n  \"servings\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/recipes/674a9d6e97e621bd71dc91e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes",
+						"674a9d6e97e621bd71dc91e1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated Pasta Carbonara\",\r\n  \"ingredients\": [\"Pasta\", \"Eggs\", \"Cheese\", \"Bacon\", \"Pepper\"],\r\n  \"instructions\": \"Cook pasta, mix with eggs and cheese, add bacon and pepper.\",\r\n  \"prepTime\": \"25 minutes\",\r\n  \"servings\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/recipes/674a9d6e97e621bd71dc91e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"recipes",
+								"674a9d6e97e621bd71dc91e1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "297"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"129-5SgK6q42keDCIbWVT94dusV2Q7Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Nov 2024 06:18:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Recipe updated successfully\",\n    \"recipe\": {\n        \"_id\": \"674a9d6e97e621bd71dc91e1\",\n        \"name\": \"Updated Pasta Carbonara\",\n        \"ingredients\": [\n            \"Pasta\",\n            \"Eggs\",\n            \"Cheese\",\n            \"Bacon\",\n            \"Pepper\"\n        ],\n        \"instructions\": \"Cook pasta, mix with eggs and cheese, add bacon and pepper.\",\n        \"prepTime\": \"25 minutes\",\n        \"servings\": 2,\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "deleteRecipe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/recipes/674a9d6e97e621bd71dc91e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recipes",
+						"674a9d6e97e621bd71dc91e1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/recipes/674a9d6e97e621bd71dc91e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"recipes",
+								"674a9d6e97e621bd71dc91e1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-KFG1c0e0/gh7dJWyle1YbvaYNGw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 30 Nov 2024 06:22:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Recipe deleted successfully\"\n}"
+				}
+			]
+		}
+	]
+}

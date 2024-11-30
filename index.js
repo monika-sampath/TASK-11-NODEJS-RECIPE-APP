@@ -20,6 +20,11 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log("Error connecting to MongoDB:", err));
 
+  app.get("/", (req, res) => {
+    res.send("Welcome to the Recipe API!");
+  });
+
+  
 // Routes
 app.use("/api", recipeRoutes);
 
